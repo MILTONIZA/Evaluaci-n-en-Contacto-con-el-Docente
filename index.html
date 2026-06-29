@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Libros</title>
+</head>
+<body>
+
+    <h1>API de Libros</h1>
+
+    <h2>Crear Libro</h2>
+
+    <input type="text" id="titulo" placeholder="Título">
+    <input type="text" id="autor" placeholder="Autor">
+    <input type="text" id="editorial" placeholder="Editorial">
+    <input type="number" id="anio" placeholder="Año">
+    <input type="text" id="isbn" placeholder="ISBN">
+
+
+    <button onclick="crearLibro()">Guardar</button>
+    <h2>Buscar por ID</h2>
+<input type="number" id="buscarId">
+<button onclick="obtenerLibro()">Buscar</button>
+
+<h2>Buscar por Autor</h2>
+<input type="text" id="buscarAutor">
+<button onclick="buscarAutor()">Buscar Autor</button>
+
+<h2>Actualizar Libro</h2>
+<input type="number" id="actualizarId" placeholder="ID">
+<input type="text" id="nuevoTitulo" placeholder="Título">
+<input type="text" id="nuevoAutor" placeholder="Autor">
+<input type="text" id="nuevaEditorial" placeholder="Editorial">
+<input type="number" id="nuevoAnio" placeholder="Año">
+<input type="text" id="nuevoISBN" placeholder="ISBN">
+
+<button onclick="actualizarLibro()">
+    Actualizar Completo (PUT)
+</button>
+
+<button onclick="actualizarTitulo()">
+    Actualizar Título (PATCH)
+</button>
+
+<h2>Contador</h2>
+<button onclick="contarLibros()">
+    Contar Libros
+</button>
+
+<div id="resultado"></div>
+
+    
+
+    <hr>
+
+    <h2>Listado de Libros</h2>
+
+    <button onclick="obtenerLibros()">Cargar Libros</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Editorial</th>
+                <th>Año</th>
+                <th>ISBN</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaLibros"></tbody>
+    </table>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

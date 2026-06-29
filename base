@@ -1,0 +1,56 @@
+CREATE DATABASE libro;
+
+USE libro;
+
+CREATE TABLE libros (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    editorial VARCHAR(255),
+    anio_publicacion INT,
+    isbn VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO libros (titulo, autor, editorial, anio_publicacion, isbn) VALUES
+('Cien años de soledad', 'Gabriel García Márquez', 'Sudamericana', 1967, '9780307474728'),
+('El amor en los tiempos del cólera', 'Gabriel García Márquez', 'Oveja Negra', 1985, '9780307389732'),
+('Crónica de una muerte anunciada', 'Gabriel García Márquez', 'La Oveja Negra', 1981, '9781400034956'),
+('Don Quijote de la Mancha', 'Miguel de Cervantes', 'Francisco de Robles', 1605, '9788420412146'),
+('La Galatea', 'Miguel de Cervantes', 'Alcalá de Henares', 1585, '9788491050292'),
+('El Principito', 'Antoine de Saint-Exupéry', 'Reynal & Hitchcock', 1943, '9780156012195'),
+('1984', 'George Orwell', 'Secker & Warburg', 1949, '9780451524935'),
+('Rebelión en la granja', 'George Orwell', 'Secker & Warburg', 1945, '9780451526342'),
+('Fahrenheit 451', 'Ray Bradbury', 'Ballantine Books', 1953, '9781451673319'),
+('Un mundo feliz', 'Aldous Huxley', 'Chatto & Windus', 1932, '9780060850524'),
+('Drácula', 'Bram Stoker', 'Archibald Constable', 1897, '9780486411095'),
+('Frankenstein', 'Mary Shelley', 'Lackington Hughes', 1818, '9780486282114'),
+('Moby Dick', 'Herman Melville', 'Harper & Brothers', 1851, '9781503280786'),
+('La Odisea', 'Homero', 'Grecia Antigua', -700, '9780140268867'),
+('La Ilíada', 'Homero', 'Grecia Antigua', -750, '9780140275360'),
+('Hamlet', 'William Shakespeare', 'Nicolas Ling', 1603, '9780743477123'),
+('Romeo y Julieta', 'William Shakespeare', 'John Danter', 1597, '9780743477116'),
+('Macbeth', 'William Shakespeare', 'First Folio', 1623, '9780743477109'),
+('Orgullo y prejuicio', 'Jane Austen', 'T. Egerton', 1813, '9780141439518'),
+('Emma', 'Jane Austen', 'John Murray', 1815, '9780141439587'),
+('Jane Eyre', 'Charlotte Brontë', 'Smith Elder & Co', 1847, '9780142437209'),
+('Cumbres Borrascosas', 'Emily Brontë', 'Thomas Newby', 1847, '9780141439556'),
+('Los miserables', 'Victor Hugo', 'A. Lacroix', 1862, '9780451419439'),
+('Nuestra Señora de París', 'Victor Hugo', 'Gosselin', 1831, '9780140443530'),
+('Guerra y paz', 'León Tolstói', 'The Russian Messenger', 1869, '9780199232765'),
+('Ana Karenina', 'León Tolstói', 'The Russian Messenger', 1878, '9780143035008'),
+('Crimen y castigo', 'Fiódor Dostoyevski', 'The Russian Messenger', 1866, '9780143058144'),
+('Los hermanos Karamázov', 'Fiódor Dostoyevski', 'The Russian Messenger', 1880, '9780374528379'),
+('El idiota', 'Fiódor Dostoyevski', 'The Russian Messenger', 1869, '9780140447927'),
+('El señor de los anillos', 'J.R.R. Tolkien', 'Allen & Unwin', 1954, '9780618640157'),
+('El Hobbit', 'J.R.R. Tolkien', 'Allen & Unwin', 1937, '9780547928227'),
+('Silmarillion', 'J.R.R. Tolkien', 'Allen & Unwin', 1977, '9780618391110'),
+('Harry Potter y la piedra filosofal', 'J.K. Rowling', 'Bloomsbury', 1997, '9780747532699'),
+('Harry Potter y la cámara secreta', 'J.K. Rowling', 'Bloomsbury', 1998, '9780747538493'),
+('Los juegos del hambre', 'Suzanne Collins', 'Scholastic', 2008, '9780439023481'),
+('En llamas', 'Suzanne Collins', 'Scholastic', 2009, '9780439023498'),
+('Sinsajo', 'Suzanne Collins', 'Scholastic', 2010, '9780439023511'),
+('El código Da Vinci', 'Dan Brown', 'Doubleday', 2003, '9780307474278'),
+('Ángeles y demonios', 'Dan Brown', 'Pocket Books', 2000, '9780743493468'),
+('Inferno', 'Dan Brown', 'Doubleday', 2013, '9780385537858');
